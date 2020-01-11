@@ -57,7 +57,7 @@ export class MetadataStore extends Reflux.Store {
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({
-        streamUrl: responseData.stream_url,
+        streamUrl: "http://45.77.222.85:8026/stream.mp3",
         current: responseData.current || "",
         next: responseData.next || "",
         flags: (responseData.flags || "").split(":"),
